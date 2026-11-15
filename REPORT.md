@@ -5,8 +5,8 @@ Student name: B.H.Dinithi Wijayasinghe
 Student ID: 2021/ICT/78
 Submission date: 15 November 2026
 
-Live URL: [PASTE VERIFIED HTTPS URL]
-GitHub repository: [PASTE YOUR REPOSITORY URL]
+Live URL: [https://eventsphere-2v0r.onrender.com/]
+GitHub repository: [[htt](https://github.com/nimsala1234/eventsphere/]
 
 ## 1. Introduction and objectives
 EventSphere is a mobile-oriented university venue booking and ticketing prototype. It enables administrators to manage venues and events, attendees to obtain tickets and request private hire, and gate staff to validate tickets. Five cooperating agents make scheduling, ticket allocation, check-in, waitlist and notification decisions. Payments are simulated; no card data is collected.
@@ -36,8 +36,8 @@ Relational entities: users, venues, events, categories, bookings, tickets, hires
 ## 4. Testing and results
 The starter implementation passed 14 Pytest tests on SQLite in its development environment. Re-run these tests locally and update this section with your own result and screenshot. Tests cover booking and unique codes, overbooking, quantity limit, double scan, wrong event, cancellation refund, venue capacity, hire alternatives, hire price and confirmation, waitlist expiry/re-offer, notification and trace, full event refund, concurrent last-seat allocation, and role/CSRF enforcement.
 
-Deployment/manual checks (fill in actual results):
-- PostgreSQL startup and public URL: [PASS / FAIL / NOT VERIFIED]
+Deployment/manual checks:
+- PostgreSQL startup and public URL: [PASS]
 - Admin creates venue and event: [RESULT]
 - Attendee books and sees QR: [RESULT]
 - Staff scans ticket and rejects second scan: [RESULT]
@@ -48,13 +48,13 @@ Deployment/manual checks (fill in actual results):
 [INSERT YOUR ACTUAL SCREENSHOTS AND TEST OUTPUT.]
 
 ## 5. Deployment and demo accounts
-Host: [Render or actual equivalent]. The service uses Python, pip install -r requirements.txt and Uvicorn bound to $PORT. PostgreSQL connection URL, signing secret and demo password are supplied through environment variables, not committed to source control. The README provides local setup and test commands.
+Host: [Render]. The service uses Python, pip install -r requirements.txt and Uvicorn bound to $PORT. PostgreSQL connection URL, signing secret and demo password are supplied through environment variables, not committed to source control. The README provides local setup and test commands.
 
 | Role | Email | Password |
 |---|---|---|
-| Administrator | admin@example.com | [DEPLOYED DEMO PASSWORD] |
-| Gate staff | staff@example.com | [DEPLOYED DEMO PASSWORD] |
-| Attendee | attendee@example.com | [DEPLOYED DEMO PASSWORD] |
+| Administrator | admin@example.com | [Dinithi123] |
+| Gate staff | staff@example.com | [Dinithi123] |
+| Attendee | attendee@example.com | [Dinithi123] |
 
 ## 6. Limitations and conclusion
-This prototype uses a synchronous, in-process message bus and a coarse database mutex. It is not designed for horizontal scaling or live payments. QR camera scanning depends on browser permissions and a CDN library. Free Render hosting may sleep, pausing the background timer until the process resumes; its free PostgreSQL database expires after 30 days. PostgreSQL and mobile camera behavior must be verified in the deployed environment. The core architecture demonstrates goal-directed agent rules, persistent state, reactive notification, proactive waitlist processing, and conversation-level traceability. [Add any additional limitations from your actual tests; disclose AI assistance if required by your institution.]
+This prototype uses a synchronous, in-process message bus and a coarse database mutex. It is not designed for horizontal scaling or live payments. QR camera scanning depends on browser permissions and a CDN library. Free Render hosting may sleep, pausing the background timer until the process resumes; its free PostgreSQL database expires after 30 days. PostgreSQL and mobile camera behavior must be verified in the deployed environment. The core architecture demonstrates goal-directed agent rules, persistent state, reactive notification, proactive waitlist processing, and conversation-level traceability.
