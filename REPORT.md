@@ -14,7 +14,7 @@ EventSphere is a mobile-oriented university venue booking and ticketing prototyp
 ## 2. Architecture
 The responsive HTML/CSS/JavaScript browser client calls a FastAPI REST API with Pydantic validation. The API submits structured messages to an in-process message bus. The five agents process requests using persistent relational tables via SQLAlchemy. SQLite is used locally; the deployment is configured for PostgreSQL. The message bus serializes messages to JSON, dispatches by recipient and records both requests and replies. The NotificationAgent subscribes to INFORM broadcasts. A background task invokes WaitlistAgent every 15 seconds when there are expired offers.
 
-Architecture diagram (draw or screenshot this in your report):
+Architecture diagram:
 Browser → FastAPI (authentication/CSRF) → JSON Message Bus → Five agents → Relational database
 Timer → Message Bus → WaitlistAgent → NotificationAgent / BookingAgent (through bus)
 
